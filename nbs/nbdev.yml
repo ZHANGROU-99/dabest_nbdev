@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "dabest_nbdev"
+  site-url: "https://ZHANGROU-99.github.io/dabest_nbdev"
+  description: "A nbdev version of dabest-Python"
+  repo-branch: main
+  repo-url: "https://github.com/ZHANGROU-99/dabest_nbdev"
