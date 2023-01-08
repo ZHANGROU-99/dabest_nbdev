@@ -12,4 +12,3 @@ website:
       - section: tutorials
         contents:
           - tutorials\index.qmd
-          - tutorials\End-To-End Walkthrough.ipynb
