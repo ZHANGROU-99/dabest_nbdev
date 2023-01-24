@@ -4,7 +4,11 @@ website:
       - getting_started.ipynb
       - section: API
         contents:
+          - API\index.qmd
           - API\bootstrap.ipynb
           - API\class.ipynb
           - API\load.ipynb
           - API\plot.ipynb
+      - section: tutorials
+        contents:
+          - tutorials\index.qmd
