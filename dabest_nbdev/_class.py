@@ -6,11 +6,6 @@ __all__ = ['cohens_d', 'weighted_delta', 'create_jackknife_indexes', 'compute_1g
            'compute_meandiff_jackknife', 'compute_bootstrapped_diff', 'MiniMetaDelta', 'two_group_difference',
            'TwoGroupsEffectSize', 'PermutationTest']
 
-# %% ../nbs/API/class.ipynb 3
-from nbdev.showdoc import *
-import nbdev
-nbdev.nbdev_export()
-
 # %% ../nbs/API/class.ipynb 4
 __version__ = "0.3.1"
 

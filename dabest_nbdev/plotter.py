@@ -4,11 +4,6 @@
 __all__ = ['merge_two_dicts', 'halfviolin', 'get_swarm_spans', 'gapped_lines', 'proportion_error_bar',
            'EffectSizeDataFramePlotter']
 
-# %% ../nbs/API/plot.ipynb 2
-from nbdev.showdoc import *
-import nbdev
-nbdev.nbdev_export()
-
 # %% ../nbs/API/plot.ipynb 3
 def _compute_standardizers(control, test):
     from numpy import mean, var, sqrt, nan
