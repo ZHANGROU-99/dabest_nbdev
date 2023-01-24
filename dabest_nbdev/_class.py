@@ -1624,7 +1624,6 @@ class TwoGroupsEffectSize(object):
     #     except AttributeError:
     #         return npnan
 
-
 # %% ../nbs/API/class.ipynb 11
 class PermutationTest:
     """
