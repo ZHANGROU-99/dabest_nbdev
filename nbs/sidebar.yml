@@ -8,7 +8,9 @@ website:
           - API\bootstrap.ipynb
           - API\class.ipynb
           - API\load.ipynb
-          - API\plot.ipynb
+          - API\misc_tools.ipynb
+          - API\plot_tools.ipynb
+          - API\plotter.ipynb
       - section: tutorials
         contents:
           - tutorials\index.qmd
