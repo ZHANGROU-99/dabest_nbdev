@@ -3,11 +3,6 @@
 # %% auto 0
 __all__ = ['Dabest', 'EffectSizeDataFrame', 'print_greeting', 'get_varname', 'load']
 
-# %% ../nbs/API/load.ipynb 3
-from nbdev.showdoc import *
-import nbdev
-nbdev.nbdev_export()
-
 # %% ../nbs/API/load.ipynb 4
 __version__ = "0.3.1"
 
