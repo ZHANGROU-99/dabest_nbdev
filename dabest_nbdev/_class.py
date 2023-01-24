@@ -231,7 +231,6 @@ def compute_meandiff_jackknife(x0, x1, is_paired, effect_size):
     """
     Given two arrays, returns the jackknife for their effect size.
     """
-    from . import effsize as __es
 
     jackknives = _create_two_group_jackknife_indexes(x0, x1, is_paired)
 
@@ -241,7 +240,7 @@ def compute_meandiff_jackknife(x0, x1, is_paired, effect_size):
         x0_shuffled = x0[j[0]]
         x1_shuffled = x1[j[1]]
 
-        es = __es.two_group_difference(x0_shuffled, x1_shuffled,
+        es = two_group_difference(x0_shuffled, x1_shuffled,
                                        is_paired, effect_size)
         out.append(es)
 
@@ -251,7 +250,6 @@ def compute_bootstrapped_diff(x0, x1, is_paired, effect_size,
                               resamples=5000, random_seed=12345):
     """Bootstraps the effect_size for 2 groups."""
     
-    from . import effsize as __es
     import numpy as np
     from numpy.random import PCG64, RandomState
     
@@ -274,7 +272,7 @@ def compute_bootstrapped_diff(x0, x1, is_paired, effect_size,
             x0_sample = rng.choice(x0, x0_len, replace=True)
             x1_sample = rng.choice(x1, x1_len, replace=True)
             
-        out[i] = __es.two_group_difference(x0_sample, x1_sample,
+        out[i] = two_group_difference(x0_sample, x1_sample,
                                           is_paired, effect_size)
     
     # check whether there are any infinities in the bootstrap,
