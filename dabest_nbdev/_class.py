@@ -4,7 +4,7 @@
 __all__ = ['cohens_d', 'weighted_delta', 'create_jackknife_indexes', 'compute_1group_jackknife', 'calculate_group_var',
            'calculate_weighted_delta', 'compute_meandiff_bias_correction', 'compute_interval_limits',
            'compute_meandiff_jackknife', 'compute_bootstrapped_diff', 'MiniMetaDelta', 'two_group_difference',
-           'TwoGroupsEffectSize', 'PermutationTest']
+           'func_difference', 'TwoGroupsEffectSize', 'PermutationTest']
 
 # %% ../nbs/API/class.ipynb 4
 __version__ = "0.3.1"
@@ -806,6 +806,58 @@ def two_group_difference(control, test, is_paired=False,
         
 def calculate_group_var(control_var, control_N,test_var, test_N):
     return control_var/control_N + test_var/test_N
+
+def func_difference(control, test, func, is_paired):
+    """
+    Applies func to `control` and `test`, and then returns the difference.
+
+    Keywords:
+    --------
+        control, test: List, tuple, or array.
+            NaNs are automatically discarded.
+
+        func: summary function to apply.
+
+        is_paired: boolean.
+            If True, computes func(test - control).
+            If False, computes func(test) - func(control).
+
+    Returns:
+    --------
+        diff: float.
+    """
+    import numpy as np
+
+    # Convert to numpy arrays for speed.
+    # NaNs are automatically dropped.
+    if control.__class__ != np.ndarray:
+        control = np.array(control)
+    if test.__class__ != np.ndarray:
+        test    = np.array(test)
+
+    if is_paired:
+        if len(control) != len(test):
+            err = "The two arrays supplied do not have the same length."
+            raise ValueError(err)
+
+        control_nan = np.where(np.isnan(control))[0]
+        test_nan    = np.where(np.isnan(test))[0]
+
+        indexes_to_drop = np.unique(np.concatenate([control_nan,
+                                                    test_nan]))
+
+        good_indexes = [i for i in range(0, len(control))
+                        if i not in indexes_to_drop]
+
+        control = control[good_indexes]
+        test    = test[good_indexes]
+
+        return func(test - control)
+
+    else:
+        control = control[~np.isnan(control)]
+        test    = test[~np.isnan(test)]
+        return func(test) - func(control)
 
 # %% ../nbs/API/class.ipynb 10
 class TwoGroupsEffectSize(object):
