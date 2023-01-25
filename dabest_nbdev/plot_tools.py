@@ -3,7 +3,7 @@
 # %% auto 0
 __all__ = ['halfviolin', 'get_swarm_spans', 'gapped_lines', 'proportion_error_bar']
 
-# %% ../nbs/API/plot_tools.ipynb 3
+# %% ../nbs/API/plot_tools.ipynb 4
 def halfviolin(v, half='right', fill_color='k', alpha=1,
                 line_color='k', line_width=0):
     import numpy as np

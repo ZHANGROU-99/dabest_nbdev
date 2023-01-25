@@ -3,7 +3,7 @@
 # %% auto 0
 __all__ = ['merge_two_dicts', 'unpack_and_add', 'print_greeting', 'get_varname']
 
-# %% ../nbs/API/misc_tools.ipynb 3
+# %% ../nbs/API/misc_tools.ipynb 4
 def merge_two_dicts(x, y):
     """
     Given two dicts, merge them into a new dict as a shallow copy.

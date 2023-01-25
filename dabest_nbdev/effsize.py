@@ -3,7 +3,7 @@
 # %% auto 0
 __all__ = ['two_group_difference', 'func_difference', 'cohens_d', 'cohens_h', 'hedges_g', 'cliffs_delta', 'weighted_delta']
 
-# %% ../nbs/API/effsize.ipynb 3
+# %% ../nbs/API/effsize.ipynb 4
 def two_group_difference(control, test, is_paired=False,
                         effect_size="mean_diff"):
     """

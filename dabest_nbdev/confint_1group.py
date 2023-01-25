@@ -4,7 +4,7 @@
 __all__ = ['create_bootstrap_indexes', 'compute_1group_jackknife', 'compute_1group_acceleration', 'compute_1group_bootstraps',
            'compute_1group_bias_correction', 'summary_ci_1group']
 
-# %% ../nbs/API/confint_1group.ipynb 3
+# %% ../nbs/API/confint_1group.ipynb 4
 def create_bootstrap_indexes(array, resamples=5000, random_seed=12345):
     """Given an array-like, returns a generator of bootstrap indexes
     to be used for resampling.

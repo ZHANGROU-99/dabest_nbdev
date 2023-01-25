@@ -7,6 +7,9 @@ website:
           - API\index.qmd
           - API\bootstrap.ipynb
           - API\class.ipynb
+          - API\confint_1group.ipynb
+          - API\confint_2group_diff.ipynb
+          - API\effsize.ipynb
           - API\load.ipynb
           - API\misc_tools.ipynb
           - API\plot_tools.ipynb
@@ -14,3 +17,5 @@ website:
       - section: tutorials
         contents:
           - tutorials\index.qmd
+          - tutorials\End-To-End Walkthrough Documentation.ipynb
+          - tutorials\proportion_plot.ipynb
