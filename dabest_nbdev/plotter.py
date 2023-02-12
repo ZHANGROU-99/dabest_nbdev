@@ -3,7 +3,7 @@
 # %% auto 0
 __all__ = ['EffectSizeDataFramePlotter']
 
-# %% ../nbs/API/plotter.ipynb 3
+# %% ../nbs/API/plotter.ipynb 4
 def EffectSizeDataFramePlotter(EffectSizeDataFrame, **plot_kwargs):
     """
     Custom function that creates an estimation plot from an EffectSizeDataFrame.
@@ -687,7 +687,7 @@ def EffectSizeDataFramePlotter(EffectSizeDataFrame, **plot_kwargs):
     if bootstraps_color_by_group is False:
         legend_labels_unique = np.unique(legend_labels)
         unique_idx = np.unique(legend_labels, return_index=True)[1]
-        legend_handles_unique = (pd.Series(legend_handles,dtype='float64').loc[unique_idx]).tolist()
+        legend_handles_unique = (pd.Series(legend_handles,dtype='object').loc[unique_idx]).tolist()
 
         if len(legend_handles_unique) > 0:
             if float_contrast is True:
