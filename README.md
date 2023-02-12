@@ -12,12 +12,25 @@ documentation.
 pip install dabest_nbdev
 ```
 
+## About
+
+dabest_nbdev is a nbdev version package of dabest package.
+
+[DABEST](https://github.com/ACCLAB/DABEST-python) is a package for **D**ata **A**nalysis using **B**ootstrap-Coupled **EST**imation.
+
 ## How to use
 
-Fill me in please! Don’t forget code examples:
+```python3
+import pandas as pd
+import dabest
 
-``` python
-1+1
+# Load the iris dataset. Requires internet access.
+iris = pd.read_csv("https://github.com/mwaskom/seaborn-data/raw/master/iris.csv")
+
+# Load the above data into `dabest`.
+iris_dabest = dabest_nbdev.load(data=iris, x="species", y="petal_width",
+                          idx=("setosa", "versicolor", "virginica"))
+
+# Produce a Cumming estimation plot.
+iris_dabest.mean_diff.plot();
 ```
-
-    2
