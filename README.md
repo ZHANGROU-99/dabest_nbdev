@@ -14,9 +14,9 @@ pip install dabest_nbdev
 
 ## About
 
-dabest_nbdev is a nbdev version package of dabest package.
+dabest_nbdev is a nbdev version package of [dabest](https://github.com/ACCLAB/DABEST-python) package.
 
-[DABEST](https://github.com/ACCLAB/DABEST-python) is a package for **D**ata **A**nalysis using **B**ootstrap-Coupled **EST**imation.
+[dabest](https://github.com/ACCLAB/DABEST-python) is a package for **D**ata **A**nalysis using **B**ootstrap-Coupled **EST**imation.
 
 ## How to use
 
