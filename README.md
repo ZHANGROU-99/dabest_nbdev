@@ -22,7 +22,7 @@ dabest_nbdev is a nbdev version package of [dabest](https://github.com/ACCLAB/DA
 
 ```python3
 import pandas as pd
-import dabest
+import dabest_nbdev
 
 # Load the iris dataset. Requires internet access.
 iris = pd.read_csv("https://github.com/mwaskom/seaborn-data/raw/master/iris.csv")
