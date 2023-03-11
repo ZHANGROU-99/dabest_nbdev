@@ -1,0 +1,22 @@
+[
+  {
+    "listing": "/tutorials/index.html",
+    "items": [
+      "/tutorials/proportion_plot.html"
+    ]
+  },
+  {
+    "listing": "/API/index.html",
+    "items": [
+      "/API/load.html",
+      "/API/class.html",
+      "/API/bootstrap.html",
+      "/API/plotter.html",
+      "/API/plot_tools.html",
+      "/API/effsize.html",
+      "/API/confint_1group.html",
+      "/API/confint_diff.html",
+      "/API/misc_tools.html"
+    ]
+  }
+]
